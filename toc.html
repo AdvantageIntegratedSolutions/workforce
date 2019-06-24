@@ -1,0 +1,519 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+	<title>ResCareWORCS- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.treeview.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		var bSearchDataLoaded = false;
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length);
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({selected: nSelectedTab});
+			$("#toc").treeview({collapsed: true});
+			$("#keywords").treeview({collapsed: true});
+			// Load search data
+			$.getScript("js/searchdata.js",	function() {
+				bSearchDataLoaded = true;
+			});
+		});
+		
+		function SelectTocItem(sLinkHref)
+		{
+			$("#toc a").each(function()
+			{
+				if ($.inArray(sLinkHref + '.htm', this.href) > -1) $(this).css('font-weight', 'bold')
+				else $(this).css('font-weight', '');
+			});
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('');
+				var oUl = $("#search_results").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt]][1]) + "</a></li>");
+				}
+				$("#lr").treeview({collapsed: false});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">Contents</a></li>
+			<li><a href="#tab-keywords">Index</a></li>
+			<li><a href="#tab-search">Search</a></li>
+		</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="filetree toctree">
+
+				<li>
+							<a
+							href="Introduction.html"
+							class="file"
+							target="FrameMain">
+								Introduction</a>
+
+				</li><li>
+							<a
+							href="Navigation.html"
+							class="folder"
+							target="FrameMain">
+								Navigation</a>
+
+				<ul><li>
+							<a
+							href="SignIn.html"
+							class="file"
+							target="FrameMain">
+								Sign In</a>
+
+				</li><li>
+							<a
+							href="ForgotYourPassword.html"
+							class="file"
+							target="FrameMain">
+								Forgot Your Password?</a>
+
+				</li><li>
+							<a
+							href="AccessingtheApplication.html"
+							class="file"
+							target="FrameMain">
+								Accessing the Application</a>
+
+				</li><li>
+							<a
+							href="HomePage.html"
+							class="file"
+							target="FrameMain">
+								Home Page</a>
+
+				</li><li>
+							<a
+							href="Search.html"
+							class="file"
+							target="FrameMain">
+								Search</a>
+
+				</li></ul></li><li>
+							<a
+							href="Participants.html"
+							class="folder"
+							target="FrameMain">
+								Participants</a>
+
+				<ul><li>
+							<a
+							href="AddParticipant.html"
+							class="file"
+							target="FrameMain">
+								Add Participant</a>
+
+				</li><li>
+							<a
+							href="AddCaseNote.html"
+							class="file"
+							target="FrameMain">
+								Add Case Note</a>
+
+				</li><li>
+							<a
+							href="AddDocument.html"
+							class="file"
+							target="FrameMain">
+								Add Document</a>
+
+				</li></ul></li><li>
+							<a
+							href="Profiles1.html"
+							class="folder"
+							target="FrameMain">
+								Profiles</a>
+
+				<ul><li>
+							<a
+							href="AddProfile.html"
+							class="file"
+							target="FrameMain">
+								Add Profile</a>
+
+				</li><li>
+							<a
+							href="Services.html"
+							class="folder"
+							target="FrameMain">
+								Services</a>
+
+				<ul><li>
+							<a
+							href="SupportServices.html"
+							class="file"
+							target="FrameMain">
+								Support Services</a>
+
+				</li><li>
+							<a
+							href="OJT.html"
+							class="file"
+							target="FrameMain">
+								OJT</a>
+
+				</li><li>
+							<a
+							href="IntensiveServices.html"
+							class="file"
+							target="FrameMain">
+								Intensive Services</a>
+
+				</li><li>
+							<a
+							href="ITA.html"
+							class="file"
+							target="FrameMain">
+								ITA</a>
+
+				</li><li>
+							<a
+							href="WEP.html"
+							class="file"
+							target="FrameMain">
+								WEP</a>
+
+				</li></ul></li></ul></li><li>
+							<a
+							href="Obligations.html"
+							class="folder"
+							target="FrameMain">
+								Obligations</a>
+
+				<ul><li>
+							<a
+							href="AddObligation.html"
+							class="file"
+							target="FrameMain">
+								Add Obligation</a>
+
+				</li><li>
+							<a
+							href="AddObligationAdjustment.html"
+							class="file"
+							target="FrameMain">
+								Add Obligation Adjustment</a>
+
+				</li></ul></li><li>
+							<a
+							href="Vouchers.html"
+							class="folder"
+							target="FrameMain">
+								Vouchers</a>
+
+				<ul><li>
+							<a
+							href="AddSSVoucher.html"
+							class="folder"
+							target="FrameMain">
+								Add SS Voucher</a>
+
+				<ul><li>
+							<a
+							href="Check.html"
+							class="file"
+							target="FrameMain">
+								Check</a>
+
+				</li><li>
+							<a
+							href="NearCashItem.html"
+							class="file"
+							target="FrameMain">
+								Near Cash Item</a>
+
+				</li></ul></li><li>
+							<a
+							href="AddOJTVoucher.html"
+							class="folder"
+							target="FrameMain">
+								Add OJT Voucher</a>
+
+				<ul><li>
+							<a
+							href="OJT1.html"
+							class="file"
+							target="FrameMain">
+								OJT</a>
+
+				</li></ul></li><li>
+							<a
+							href="AddIntSvcsVoucher.html"
+							class="folder"
+							target="FrameMain">
+								Add Int Svcs Voucher</a>
+
+				<ul><li>
+							<a
+							href="IntensiveServices1.html"
+							class="file"
+							target="FrameMain">
+								Intensive Services</a>
+
+				</li></ul></li><li>
+							<a
+							href="AddITAVoucher.html"
+							class="folder"
+							target="FrameMain">
+								Add ITA Voucher</a>
+
+				<ul><li>
+							<a
+							href="ITA1.html"
+							class="file"
+							target="FrameMain">
+								ITA</a>
+
+				</li></ul></li><li>
+							<a
+							href="AddWEPVoucher.html"
+							class="folder"
+							target="FrameMain">
+								Add WEP Voucher</a>
+
+				<ul><li>
+							<a
+							href="WorkExperience.html"
+							class="file"
+							target="FrameMain">
+								Work Experience</a>
+
+				</li></ul></li><li>
+							<a
+							href="VoucherApprovals.html"
+							class="file"
+							target="FrameMain">
+								Voucher Approvals</a>
+
+				</li><li>
+							<a
+							href="PrintVoucher.html"
+							class="file"
+							target="FrameMain">
+								Print Voucher</a>
+
+				</li></ul></li><li>
+							<a
+							href="Offices.html"
+							class="folder"
+							target="FrameMain">
+								Offices</a>
+
+				<ul><li>
+							<a
+							href="AddOffice.html"
+							class="file"
+							target="FrameMain">
+								Add Office</a>
+
+				</li></ul></li><li>
+							<a
+							href="Staff.html"
+							class="folder"
+							target="FrameMain">
+								Staff</a>
+
+				<ul><li>
+							<a
+							href="AddStaff.html"
+							class="file"
+							target="FrameMain">
+								Add Staff</a>
+
+				</li></ul></li><li>
+							<a
+							href="Providers.html"
+							class="folder"
+							target="FrameMain">
+								Providers</a>
+
+				<ul><li>
+							<a
+							href="AddProvider.html"
+							class="file"
+							target="FrameMain">
+								Add Provider</a>
+
+				</li></ul></li><li>
+							<a
+							href="TrainingPrograms.html"
+							class="folder"
+							target="FrameMain">
+								Training Programs</a>
+
+				<ul><li>
+							<a
+							href="AddTrainingProgram.html"
+							class="file"
+							target="FrameMain">
+								Add Training Program</a>
+
+				</li></ul></li><li>
+							<a
+							href="FundingSources.html"
+							class="folder"
+							target="FrameMain">
+								Funding Sources</a>
+
+				<ul><li>
+							<a
+							href="AddFundingSource.html"
+							class="file"
+							target="FrameMain">
+								Add Funding Source</a>
+
+				</li></ul></li><li>
+							<a
+							href="FundingChanges.html"
+							class="folder"
+							target="FrameMain">
+								Funding Changes</a>
+
+				<ul><li>
+							<a
+							href="AddFundingChange.html"
+							class="file"
+							target="FrameMain">
+								Add Funding Change</a>
+
+				</li></ul></li><li>
+							<a
+							href="Payments.html"
+							class="folder"
+							target="FrameMain">
+								Payments</a>
+
+				<ul><li>
+							<a
+							href="AddPayment.html"
+							class="file"
+							target="FrameMain">
+								Add Payment</a>
+
+				</li></ul></li><li>
+							<a
+							href="VoucherReductions.html"
+							class="folder"
+							target="FrameMain">
+								Voucher Reductions</a>
+
+				<ul><li>
+							<a
+							href="AddReduction.html"
+							class="file"
+							target="FrameMain">
+								Add Reduction</a>
+
+				</li></ul></li><li>
+							<a
+							href="Refunds.html"
+							class="folder"
+							target="FrameMain">
+								Refunds</a>
+
+				<ul><li>
+							<a
+							href="AddRefund.html"
+							class="file"
+							target="FrameMain">
+								Add Refund</a>
+
+				</li></ul></li></ul>
+		</div>
+		<div id="tab-keywords">
+			<ul id="keywords" class="filetree indextree">
+
+				</ul>
+		</div>
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+	</div>
+    
+</body>
+
+</html>
+
