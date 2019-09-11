@@ -1,0 +1,631 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+	<title>Project Management- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.treeview.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		var bSearchDataLoaded = false;
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length);
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({selected: nSelectedTab});
+			$("#toc").treeview({collapsed: true});
+			$("#keywords").treeview({collapsed: true});
+			// Load search data
+			$.getScript("js/searchdata.js",	function() {
+				bSearchDataLoaded = true;
+			});
+		});
+		
+		function SelectTocItem(sLinkHref)
+		{
+			$("#toc a").each(function()
+			{
+				if ($.inArray(sLinkHref + '.htm', this.href) > -1) $(this).css('font-weight', 'bold')
+				else $(this).css('font-weight', '');
+			});
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('');
+				var oUl = $("#search_results").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt]][1]) + "</a></li>");
+				}
+				$("#lr").treeview({collapsed: false});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">Contents</a></li>
+			<li><a href="#tab-keywords">Index</a></li>
+			<li><a href="#tab-search">Search</a></li>
+		</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="filetree toctree">
+
+				<li>
+							<a
+							href="Introduction.html"
+							class="file"
+							target="FrameMain">
+								Introduction</a>
+
+				</li><li>
+							<a
+							href="QuickBaseBasics.html"
+							class="folder"
+							target="FrameMain">
+								QuickBase Basics</a>
+
+				<ul><li>
+							<a
+							href="SignIn.html"
+							class="file"
+							target="FrameMain">
+								Sign In</a>
+
+				</li><li>
+							<a
+							href="ForgotYourPassword.html"
+							class="file"
+							target="FrameMain">
+								Forgot Your Password?</a>
+
+				</li><li>
+							<a
+							href="MyQuickBase.html"
+							class="file"
+							target="FrameMain">
+								My QuickBase</a>
+
+				</li><li>
+							<a
+							href="NavigationBar.html"
+							class="file"
+							target="FrameMain">
+								Navigation Bar</a>
+
+				</li><li>
+							<a
+							href="HomePage.html"
+							class="file"
+							target="FrameMain">
+								Home Page</a>
+
+				</li><li>
+							<a
+							href="Search.html"
+							class="file"
+							target="FrameMain">
+								Search</a>
+
+				</li><li>
+							<a
+							href="Help.html"
+							class="file"
+							target="FrameMain">
+								Help</a>
+
+				</li><li>
+							<a
+							href="Save.html"
+							class="file"
+							target="FrameMain">
+								Save</a>
+
+				</li><li>
+							<a
+							href="RequiredFields.html"
+							class="file"
+							target="FrameMain">
+								Required Fields</a>
+
+				</li></ul></li><li>
+							<a
+							href="ProjectManagement.html"
+							class="folder"
+							target="FrameMain">
+								Project Management</a>
+
+				<ul><li>
+							<a
+							href="ProjectManagementHomepage.html"
+							class="folder"
+							target="FrameMain">
+								Project Management Homepage</a>
+
+				<ul><li>
+							<a
+							href="QuickLinks.html"
+							class="file"
+							target="FrameMain">
+								Quick Links</a>
+
+				</li><li>
+							<a
+							href="SupportAccess.html"
+							class="file"
+							target="FrameMain">
+								Support &amp; Access</a>
+
+				</li><li>
+							<a
+							href="ManagementReports.html"
+							class="file"
+							target="FrameMain">
+								Management Reports</a>
+
+				</li><li>
+							<a
+							href="RecordedWebExSessions.html"
+							class="file"
+							target="FrameMain">
+								Recorded WebEx Sessions</a>
+
+				</li><li>
+							<a
+							href="Resources.html"
+							class="file"
+							target="FrameMain">
+								Resources</a>
+
+				</li></ul></li><li>
+							<a
+							href="ProjectProfile.html"
+							class="folder"
+							target="FrameMain">
+								Project Profile</a>
+
+				<ul><li>
+							<a
+							href="ResCareTalentMarket.html"
+							class="file"
+							target="FrameMain">
+								ResCare Talent Market</a>
+
+				</li><li>
+							<a
+							href="ContractParents.html"
+							class="file"
+							target="FrameMain">
+								Contract Parents</a>
+
+				</li><li>
+							<a
+							href="Locations.html"
+							class="file"
+							target="FrameMain">
+								Locations</a>
+
+				</li><li>
+							<a
+							href="WORCSSOW.html"
+							class="file"
+							target="FrameMain">
+								WORCS SOW</a>
+
+				</li></ul></li><li>
+							<a
+							href="Performance.html"
+							class="folder"
+							target="FrameMain">
+								Performance</a>
+
+				<ul><li>
+							<a
+							href="WeeklyScorecard.html"
+							class="folder"
+							target="FrameMain">
+								Weekly Scorecard</a>
+
+				<ul><li>
+							<a
+							href="HR.html"
+							class="file"
+							target="FrameMain">
+								HR</a>
+
+				</li><li>
+							<a
+							href="CustomerInteractions.html"
+							class="file"
+							target="FrameMain">
+								Customer Interactions</a>
+
+				</li><li>
+							<a
+							href="Quality1.html"
+							class="file"
+							target="FrameMain">
+								Quality</a>
+
+				</li><li>
+							<a
+							href="Financial.html"
+							class="file"
+							target="FrameMain">
+								Financial</a>
+
+				</li></ul></li><li>
+							<a
+							href="KeyOperatingMetrics.html"
+							class="folder"
+							target="FrameMain">
+								Key Operating Metrics</a>
+
+				<ul><li>
+							<a
+							href="AddMetric.html"
+							class="file"
+							target="FrameMain">
+								Add Metric</a>
+
+				</li></ul></li><li>
+							<a
+							href="Deliverables1.html"
+							class="folder"
+							target="FrameMain">
+								Deliverables</a>
+
+				<ul><li>
+							<a
+							href="AddDeliverable.html"
+							class="file"
+							target="FrameMain">
+								Add Deliverable</a>
+
+				</li></ul></li></ul></li><li>
+							<a
+							href="Quality.html"
+							class="folder"
+							target="FrameMain">
+								Quality</a>
+
+				<ul><li>
+							<a
+							href="BestInClass.html"
+							class="file"
+							target="FrameMain">
+								Best In Class</a>
+
+				</li><li>
+							<a
+							href="ExternalMonitoring1.html"
+							class="folder"
+							target="FrameMain">
+								External Monitoring</a>
+
+				<ul><li>
+							<a
+							href="AddExternalMonitoring.html"
+							class="folder"
+							target="FrameMain">
+								Add External Monitoring</a>
+
+				<ul><li>
+							<a
+							href="Notification.html"
+							class="file"
+							target="FrameMain">
+								Notification</a>
+
+				</li><li>
+							<a
+							href="ReportReceived.html"
+							class="file"
+							target="FrameMain">
+								Report Received</a>
+
+				</li><li>
+							<a
+							href="ResponseDue.html"
+							class="file"
+							target="FrameMain">
+								Response Due</a>
+
+				</li><li>
+							<a
+							href="ResponseDrafted.html"
+							class="file"
+							target="FrameMain">
+								Response Drafted</a>
+
+				</li><li>
+							<a
+							href="ResponseSubmitted.html"
+							class="file"
+							target="FrameMain">
+								Response Submitted</a>
+
+				</li><li>
+							<a
+							href="ResponseAccepted.html"
+							class="file"
+							target="FrameMain">
+								Response Accepted</a>
+
+				</li></ul></li></ul></li><li>
+							<a
+							href="Metrics.html"
+							class="folder"
+							target="FrameMain">
+								Metrics</a>
+
+				<ul><li>
+							<a
+							href="ProjectMetricsMatrix.html"
+							class="folder"
+							target="FrameMain">
+								Project Metrics Matrix</a>
+
+				<ul><li>
+							<a
+							href="AddInventoryMetric.html"
+							class="file"
+							target="FrameMain">
+								Add/Inventory Metric</a>
+
+				</li></ul></li></ul></li></ul></li><li>
+							<a
+							href="ToolsUtilization.html"
+							class="folder"
+							target="FrameMain">
+								Tools Utilization</a>
+
+				<ul><li>
+							<a
+							href="CareerPathwaysExplorer.html"
+							class="file"
+							target="FrameMain">
+								Career Pathways Explorer</a>
+
+				</li><li>
+							<a
+							href="RAYS.html"
+							class="file"
+							target="FrameMain">
+								RAYS</a>
+
+				</li><li>
+							<a
+							href="ResCareGEDAcademy.html"
+							class="file"
+							target="FrameMain">
+								ResCare GED Academy</a>
+
+				</li><li>
+							<a
+							href="ResumePro.html"
+							class="file"
+							target="FrameMain">
+								Resume Pro</a>
+
+				</li><li>
+							<a
+							href="TalentMarket.html"
+							class="file"
+							target="FrameMain">
+								Talent Market</a>
+
+				</li><li>
+							<a
+							href="ToolsReview.html"
+							class="file"
+							target="FrameMain">
+								Tools Review</a>
+
+				</li></ul></li><li>
+							<a
+							href="ContractReview.html"
+							class="folder"
+							target="FrameMain">
+								Contract Review</a>
+
+				<ul><li>
+							<a
+							href="QuickLinks1.html"
+							class="file"
+							target="FrameMain">
+								Quick Links</a>
+
+				</li><li>
+							<a
+							href="ManagementReports1.html"
+							class="folder"
+							target="FrameMain">
+								Management Reports</a>
+
+				<ul><li>
+							<a
+							href="ContractParents1.html"
+							class="file"
+							target="FrameMain">
+								Contract Parents</a>
+
+				</li><li>
+							<a
+							href="Contracts.html"
+							class="folder"
+							target="FrameMain">
+								Contracts</a>
+
+				<ul><li>
+							<a
+							href="ContractDetails.html"
+							class="file"
+							target="FrameMain">
+								Contract Details</a>
+
+				</li><li>
+							<a
+							href="Amendments.html"
+							class="file"
+							target="FrameMain">
+								Amendments</a>
+
+				</li><li>
+							<a
+							href="Deliverables.html"
+							class="file"
+							target="FrameMain">
+								Deliverables</a>
+
+				</li><li>
+							<a
+							href="Impact.html"
+							class="file"
+							target="FrameMain">
+								Impact</a>
+
+				</li><li>
+							<a
+							href="ReviewApproval.html"
+							class="file"
+							target="FrameMain">
+								Review &amp; Approval</a>
+
+				</li><li>
+							<a
+							href="Performance1.html"
+							class="file"
+							target="FrameMain">
+								Performance</a>
+
+				</li><li>
+							<a
+							href="Signature.html"
+							class="file"
+							target="FrameMain">
+								Signature</a>
+
+				</li></ul></li><li>
+							<a
+							href="MyDocumentReviews.html"
+							class="file"
+							target="FrameMain">
+								My Document Reviews</a>
+
+				</li><li>
+							<a
+							href="SignatureAuthorities.html"
+							class="file"
+							target="FrameMain">
+								Signature Authorities</a>
+
+				</li><li>
+							<a
+							href="SearchByControl.html"
+							class="file"
+							target="FrameMain">
+								Search By Control #</a>
+
+				</li></ul></li><li>
+							<a
+							href="TakeAction.html"
+							class="file"
+							target="FrameMain">
+								Take Action</a>
+
+				</li><li>
+							<a
+							href="DocumentsPendingApproval.html"
+							class="file"
+							target="FrameMain">
+								Documents Pending Approval</a>
+
+				</li></ul></li></ul></li></ul>
+		</div>
+		<div id="tab-keywords">
+			<ul id="keywords" class="filetree indextree">
+
+				</ul>
+		</div>
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+	</div>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,422 @@
+﻿/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-weight: bold;
+}
+span.rvts7
+{
+ font-size: 12pt;
+ font-family: 'Calibri Light';
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.rvts8
+{
+ font-size: 14pt;
+ font-family: 'Calibri Light';
+}
+span.rvts9
+{
+ font-size: 14pt;
+ font-family: 'Cambria';
+ color: #3f3f3f;
+}
+a.rvts10, span.rvts10
+{
+ font-size: 14pt;
+ font-family: 'Calibri Light';
+ font-weight: bold;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts11 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts12, span.rvts12 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+span.rvts13
+{
+ font-size: 14pt;
+ font-family: 'cambria';
+ font-weight: bold;
+ color: #365f91;
+}
+span.rvts14
+{
+ font-size: 11pt;
+ font-family: 'calibri';
+}
+span.rvts15
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+}
+span.rvts16
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-weight: bold;
+ color: #1f497d;
+}
+a.rvts17, span.rvts17
+{
+ font-size: 11pt;
+ font-family: 'calibri';
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts18
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+}
+span.rvts19
+{
+ font-size: 12pt;
+ font-family: 'Calibri Light';
+}
+span.rvts20
+{
+ font-size: 12pt;
+ font-family: 'Calibri Light';
+ color: #4f81bd;
+}
+span.rvts21
+{
+ font-family: 'calibri';
+}
+span.rvts22
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+ font-weight: bold;
+}
+span.rvts23
+{
+ font-size: 14pt;
+ font-family: 'calibri';
+ font-style: italic;
+}
+span.rvts24
+{
+ font-size: 13pt;
+}
+span.rvts25
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+}
+span.rvts26
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts27
+{
+ font-size: 15pt;
+ font-family: 'Calibri Light';
+ text-decoration: underline;
+}
+span.rvts28
+{
+ font-size: 15pt;
+ font-family: 'Calibri Light';
+}
+span.rvts29
+{
+ font-size: 15pt;
+}
+a.rvts30, span.rvts30
+{
+ font-size: 15pt;
+ font-family: 'Calibri Light';
+ text-decoration: none;
+}
+a.rvts31, span.rvts31
+{
+ font-size: 15pt;
+ font-family: 'Calibri Light';
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts32
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ text-decoration: underline;
+}
+span.rvts33
+{
+ font-family: 'Calibri Light';
+ font-weight: bold;
+}
+span.rvts34
+{
+ font-family: 'Calibri Light';
+}
+span.rvts35
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-style: italic;
+}
+span.rvts36
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+}
+span.rvts37
+{
+ font-size: 14pt;
+ font-family: 'Calibri Light';
+ font-weight: bold;
+}
+span.rvts38
+{
+ font-weight: bold;
+}
+span.rvts39
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.rvts40
+{
+ font-size: 12pt;
+ font-family: 'calibri';
+ text-decoration: underline;
+}
+span.rvts41
+{
+ font-family: 'helvetica';
+ color: #333333;
+ background-color: #ffffff;
+}
+span.rvts42
+{
+ font-family: 'Calibri';
+ color: #333333;
+ background-color: #ffffff;
+}
+span.rvts43
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ color: #333333;
+ background-color: #ffffff;
+}
+span.rvts44
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #333333;
+ background-color: #ffffff;
+}
+span.rvts45
+{
+ font-size: 9pt;
+ font-family: 'Calibri';
+ font-style: italic;
+}
+span.rvts46
+{
+ font-family: 'Calibri';
+}
+span.rvts47
+{
+ font-size: 14pt;
+}
+a.rvts48, span.rvts48
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts49, span.rvts49
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts50
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #ff8040;
+}
+span.rvts51
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #00b050;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+}
+.rvps3
+{
+ text-align: center;
+ line-height: 1.15;
+ margin: 0px 0px 13px 0px;
+}
+.rvps4 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+.rvps5
+{
+ line-height: 1.15;
+ margin: 0px 0px 13px 0px;
+}
+.rvps6
+{
+ text-align: left;
+ text-indent: 0px;
+ line-height: 1.15;
+ page-break-inside: avoid;
+ page-break-after: avoid;
+ padding: 0px 0px 0px 0px;
+ margin: 32px 0px 0px 0px;
+}
+.rvps7
+{
+ line-height: 1.15;
+ margin: 0px 0px 13px 48px;
+}
+.rvps8
+{
+}
+.rvps9
+{
+ border-color: #000000;
+ border-style: solid;
+ border-width: 1px;
+}
+.rvps10
+{
+ margin: 0px 0px 0px 36px;
+}
+.rvps11
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps12
+{
+ line-height: 0.50;
+}
+.rvps13
+{
+ text-indent: -24px;
+ line-height: 1.15;
+ margin: 0px 0px 13px 96px;
+}
+.rvps14
+{
+ text-indent: -24px;
+ line-height: 1.15;
+ margin: 0px 0px 13px 72px;
+}
+.rvps15
+{
+ text-indent: -24px;
+ line-height: 1.15;
+ margin: 0px 0px 13px 120px;
+}
+.rvps16
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps17
+{
+}
+.rvps18
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps19
+{
+ margin: 0px 0px 0px 24px;
+}
+.rvps20
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps21
+{
+}
+.rvps22
+{
+}
