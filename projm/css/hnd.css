@@ -66,238 +66,471 @@ a.rvts10, span.rvts10
  color: #0000ff;
  text-decoration: underline;
 }
-span.rvts11 /* Font Style */
+span.rvts11
+{
+ font-size: 12pt;
+ font-family: 'Constantia';
+ color: #333333;
+ letter-spacing: 1px;
+ background-color: #ffffff;
+}
+span.rvts12
+{
+ font-size: 12pt;
+ font-family: 'Constantia';
+ color: #3f3f3f;
+}
+span.rvts13
+{
+ font-size: 12pt;
+ font-family: 'Constantia';
+ color: #3f3f3f;
+ letter-spacing: 1px;
+ background-color: #ffffff;
+}
+span.rvts14 /* Font Style */
 {
  font-family: 'Tahoma', 'Geneva', sans-serif;
  font-style: italic;
  color: #c0c0c0;
 }
-a.rvts12, span.rvts12 /* Font Style */
+a.rvts15, span.rvts15 /* Font Style */
 {
  font-family: 'Tahoma', 'Geneva', sans-serif;
  font-style: italic;
  color: #6666ff;
  text-decoration: underline;
 }
-span.rvts13
+span.rvts16
 {
  font-size: 14pt;
  font-family: 'cambria';
  font-weight: bold;
  color: #365f91;
 }
-span.rvts14
+span.rvts17
 {
  font-size: 11pt;
  font-family: 'calibri';
 }
-span.rvts15
+span.rvts18
 {
  font-size: 14pt;
  font-family: 'calibri';
 }
-span.rvts16
+span.rvts19
 {
  font-size: 14pt;
  font-family: 'calibri';
  font-weight: bold;
  color: #1f497d;
 }
-a.rvts17, span.rvts17
+a.rvts20, span.rvts20
 {
  font-size: 11pt;
  font-family: 'calibri';
  color: #0000ff;
  text-decoration: underline;
 }
-span.rvts18
-{
- font-size: 12pt;
- font-family: 'calibri';
-}
-span.rvts19
-{
- font-size: 12pt;
- font-family: 'Calibri Light';
-}
-span.rvts20
-{
- font-size: 12pt;
- font-family: 'Calibri Light';
- color: #4f81bd;
-}
 span.rvts21
 {
+ font-size: 12pt;
  font-family: 'calibri';
 }
 span.rvts22
 {
  font-size: 12pt;
+ font-family: 'Calibri Light';
+}
+span.rvts23
+{
+ font-size: 12pt;
+ font-family: 'Calibri Light';
+ color: #4f81bd;
+}
+span.rvts24
+{
+ font-family: 'calibri';
+}
+span.rvts25
+{
+ font-size: 18pt;
+ font-family: 'Calibri';
+}
+span.rvts26
+{
+ font-size: 12pt;
  font-family: 'calibri';
  font-weight: bold;
 }
-span.rvts23
+span.rvts27
 {
  font-size: 14pt;
  font-family: 'calibri';
  font-style: italic;
 }
-span.rvts24
+span.rvts28
 {
  font-size: 13pt;
 }
-span.rvts25
+span.rvts29
 {
  font-size: 14pt;
  font-family: 'Calibri';
 }
-span.rvts26
+span.rvts30
 {
  font-size: 14pt;
  font-family: 'Calibri';
  font-weight: bold;
  color: #ff0000;
 }
-span.rvts27
+span.rvts31
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ text-decoration: underline;
+}
+span.rvts32
 {
  font-size: 15pt;
  font-family: 'Calibri Light';
  text-decoration: underline;
 }
-span.rvts28
+span.rvts33
 {
  font-size: 15pt;
  font-family: 'Calibri Light';
 }
-span.rvts29
+span.rvts34
 {
  font-size: 15pt;
 }
-a.rvts30, span.rvts30
+a.rvts35, span.rvts35
 {
  font-size: 15pt;
  font-family: 'Calibri Light';
  text-decoration: none;
 }
-a.rvts31, span.rvts31
+a.rvts36, span.rvts36
 {
  font-size: 15pt;
  font-family: 'Calibri Light';
  color: #0000ff;
  text-decoration: underline;
 }
-span.rvts32
-{
- font-size: 14pt;
- font-family: 'Calibri';
- text-decoration: underline;
-}
-span.rvts33
-{
- font-family: 'Calibri Light';
- font-weight: bold;
-}
-span.rvts34
-{
- font-family: 'Calibri Light';
-}
-span.rvts35
-{
- font-size: 14pt;
- font-family: 'Calibri';
- font-style: italic;
-}
-span.rvts36
-{
- font-size: 14pt;
- font-family: 'Calibri';
- font-weight: bold;
-}
 span.rvts37
 {
- font-size: 14pt;
+ font-size: 15pt;
  font-family: 'Calibri Light';
- font-weight: bold;
+ color: #0000ff;
+ text-decoration: underline;
 }
-span.rvts38
+a.rvts38, span.rvts38
 {
- font-weight: bold;
+ font-size: 15pt;
+ font-family: 'Calibri Light';
+ text-decoration: none;
 }
 span.rvts39
 {
- font-size: 14pt;
- font-family: 'Calibri';
- font-weight: bold;
- text-decoration: underline;
+ font-size: 12pt;
+ font-family: 'Corbel';
 }
 span.rvts40
 {
- font-size: 12pt;
- font-family: 'calibri';
- text-decoration: underline;
+ font-size: 14pt;
+ font-family: 'Corbel';
+ color: #000000;
 }
 span.rvts41
 {
- font-family: 'helvetica';
- color: #333333;
- background-color: #ffffff;
+ font-size: 14pt;
+ font-family: 'Corbel';
+ font-style: italic;
+ color: #000000;
 }
 span.rvts42
 {
- font-family: 'Calibri';
- color: #333333;
- background-color: #ffffff;
+ font-size: 14pt;
+ font-family: 'Corbel';
+ font-style: italic;
+ font-weight: bold;
+ color: #000000;
 }
 span.rvts43
 {
- font-size: 12pt;
- font-family: 'Calibri';
- color: #333333;
- background-color: #ffffff;
+ font-size: 14pt;
+ font-family: 'Corbel';
+ font-weight: bold;
+ color: #000000;
+ text-decoration: underline;
 }
 span.rvts44
 {
- font-size: 12pt;
- font-family: 'Calibri';
+ font-size: 20pt;
  font-weight: bold;
- color: #333333;
- background-color: #ffffff;
 }
 span.rvts45
 {
- font-size: 9pt;
+ font-size: 14pt;
  font-family: 'Calibri';
- font-style: italic;
+ color: #0000ff;
+ text-decoration: underline;
 }
-span.rvts46
+a.rvts46, span.rvts46
 {
+ font-size: 14pt;
  font-family: 'Calibri';
+ color: #0000ff;
+ text-decoration: underline;
 }
 span.rvts47
 {
- font-size: 14pt;
+ font-family: 'Calibri Light';
+ font-weight: bold;
 }
-a.rvts48, span.rvts48
+span.rvts48
 {
- color: #0000ff;
- text-decoration: underline;
+ font-family: 'Calibri Light';
 }
-a.rvts49, span.rvts49
+span.rvts49
 {
  font-size: 14pt;
  font-family: 'Calibri';
- font-weight: bold;
- color: #0000ff;
- text-decoration: underline;
+ font-style: italic;
 }
 span.rvts50
 {
  font-size: 14pt;
  font-family: 'Calibri';
  font-weight: bold;
- color: #ff8040;
 }
 span.rvts51
+{
+ font-size: 14pt;
+ font-family: 'Calibri Light';
+ font-weight: bold;
+}
+span.rvts52
+{
+ font-size: 22pt;
+ font-family: 'Corbel';
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts53
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+ color: #000000;
+ letter-spacing: -1px;
+}
+a.rvts54, span.rvts54
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+ color: #0000ff;
+ letter-spacing: -1px;
+ text-decoration: underline;
+}
+span.rvts55
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+ color: #000000;
+}
+span.rvts56
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ color: #000000;
+}
+span.rvts57
+{
+ font-size: 16pt;
+ font-family: 'Corbel';
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts58
+{
+ font-size: 18pt;
+ font-family: 'Calibri';
+ color: #000000;
+ letter-spacing: -1px;
+}
+span.rvts59
+{
+ font-size: 18pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #000000;
+ letter-spacing: 1px;
+ text-decoration: underline;
+}
+span.rvts60
+{
+ font-size: 18pt;
+ font-family: 'Calibri';
+ color: #000000;
+ letter-spacing: 1px;
+ text-decoration: underline;
+}
+span.rvts61
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts62
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+}
+span.rvts63
+{
+ font-size: 18pt;
+ font-family: 'Calibri';
+ color: #000000;
+}
+span.rvts64
+{
+ font-size: 18pt;
+ font-family: 'Calibri';
+}
+span.rvts65
+{
+ font-size: 14pt;
+}
+span.rvts66
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #000000;
+ text-decoration: underline;
+}
+span.rvts67
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts68
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+ color: #000000;
+ text-decoration: underline;
+}
+span.rvts69
+{
+ font-size: 16pt;
+ font-family: 'Calibri';
+}
+span.rvts70
+{
+ font-size: 24pt;
+ font-family: 'Corbel';
+ color: #000000;
+ text-decoration: underline;
+}
+span.rvts71
+{
+ font-size: 24pt;
+ font-family: 'Corbel';
+ color: #000000;
+}
+span.rvts72
+{
+ font-size: 16pt;
+ font-family: 'Corbel';
+ color: #000000;
+}
+span.rvts73
+{
+ font-size: 4pt;
+ font-family: 'Calibri';
+ color: #000000;
+}
+span.rvts74
+{
+ font-size: 14pt;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts75
+{
+ font-size: 12pt;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts76
+{
+ font-size: 12pt;
+}
+span.rvts77
+{
+ font-size: 14pt;
+ font-weight: bold;
+ text-decoration: underline;
+}
+a.rvts78, span.rvts78
+{
+ font-size: 14pt;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts79
+{
+ font-size: 14pt;
+ font-weight: bold;
+}
+span.rvts80
+{
+ font-weight: bold;
+}
+span.rvts81
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.rvts82
+{
+ font-size: 9pt;
+ font-family: 'Calibri';
+ font-style: italic;
+}
+span.rvts83
+{
+ font-family: 'Calibri';
+}
+a.rvts84, span.rvts84
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts85, span.rvts85
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts86
+{
+ font-size: 14pt;
+ font-family: 'Calibri';
+ font-weight: bold;
+ color: #ff8040;
+}
+span.rvts87
 {
  font-size: 14pt;
  font-family: 'Calibri';
@@ -361,62 +594,60 @@ p,ul,ol /* Paragraph Style */
 }
 .rvps9
 {
+ margin: 0px 0px 0px 36px;
+}
+.rvps10
+{
+ line-height: 0.50;
+}
+.rvps11
+{
  border-color: #000000;
  border-style: solid;
  border-width: 1px;
 }
-.rvps10
-{
- margin: 0px 0px 0px 36px;
-}
-.rvps11
-{
- margin: 0px 0px 0px 48px;
-}
 .rvps12
 {
- line-height: 0.50;
+ text-indent: -30px;
+ margin: 0px 0px 0px 30px;
 }
 .rvps13
 {
- text-indent: -24px;
- line-height: 1.15;
- margin: 0px 0px 13px 96px;
+ margin: 0px 0px 0px 30px;
 }
 .rvps14
 {
- text-indent: -24px;
- line-height: 1.15;
- margin: 0px 0px 13px 72px;
+ margin: 0px 0px 0px 102px;
 }
 .rvps15
 {
- text-indent: -24px;
- line-height: 1.15;
- margin: 0px 0px 13px 120px;
+ text-align: center;
 }
 .rvps16
 {
- margin: 0px 0px 0px 48px;
 }
 .rvps17
 {
+ margin: 0px 0px 0px 48px;
 }
 .rvps18
 {
- margin: 0px 0px 0px 48px;
 }
 .rvps19
 {
- margin: 0px 0px 0px 24px;
+ margin: 0px 0px 0px 48px;
 }
 .rvps20
 {
- margin: 0px 0px 0px 48px;
+ margin: 0px 0px 0px 24px;
 }
 .rvps21
 {
+ margin: 0px 0px 0px 48px;
 }
 .rvps22
+{
+}
+.rvps23
 {
 }
